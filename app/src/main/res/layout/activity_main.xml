@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true" >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:id="@+id/header"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/icon_navdrawer"
+                    android:layout_margin="13dp"
+                    android:padding="20dp"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_gradient"
+                    tools:ignore="ContentDescription" />
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/echo_logo"
+                    android:layout_marginTop="60dp"
+                    android:layout_centerHorizontal="true"
+                    tools:ignore="ContentDescription" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:text="Women Safety App"
+                    android:textColor="#fff" />
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/navigation_recycler_view"
+                android:layout_below="@id/header"
+                android:background="#fff"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+            <RelativeLayout android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/navigation_recycler_view"
+                android:id="@+id/buttons"
+                android:background="#fff">
+                <Button
+                    android:id="@+id/logout_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:drawableLeft="@mipmap/logout"
+                    android:drawablePadding="17dp" android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:text="Logout"
+                    android:textSize="15dp"
+                    android:textColor="#212121"
+                    android:gravity="center_vertical"
+                    style="?android:attr/borderlessButtonStyle"/>
+                <View android:layout_width="match_parent"
+                    android:id="@+id/delete_view"
+                    android:layout_below="@id/logout_button"
+                    android:layout_toEndOf="@id/logout_button"
+                android:layout_height="0.2dp"
+                android:layout_marginRight="17dp"
+                android:background="#EEEEEE"
+                    android:layout_toRightOf="@id/logout_button" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

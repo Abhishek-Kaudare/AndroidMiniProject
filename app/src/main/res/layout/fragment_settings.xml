@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rll3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#d3d3d3"
+    android:clickable="true"
+    tools:context=".activities.RegisterActivity">
+    <LinearLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rtv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Personal Details"
+            android:layout_marginLeft="40dp"
+            android:textColor="#f00"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/rreg_name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ems="15"
+            android:gravity="center"
+            android:background="#fff"
+            android:drawableLeft="@drawable/avatar"
+            android:hint="Name"
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            />
+
+        <EditText
+            android:id="@+id/rreg_age"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ems="15"
+            android:gravity="center"
+            android:background="#fff"
+            android:drawableLeft="@drawable/age"
+            android:hint="Age"
+            android:imeOptions="actionNext"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/rtv3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Contact Details :"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            android:textColor="#f00"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/rreg_cno"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ems="15"
+            android:gravity="center"
+            android:background="#fff"
+            android:drawableLeft="@drawable/phone"
+            android:hint="Contact No"
+            android:imeOptions="actionNext"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/rreg_email"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ems="15"
+            android:gravity="center"
+            android:background="#fff"
+            android:drawableLeft="@drawable/mail"
+            android:hint="Email - Id"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/rtv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:fontFamily="cursive"
+            android:text="Emergency Contact Details :"
+            android:textColor="#f00"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/rnumber_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:ems="15"
+            android:gravity="center"
+            android:hint="Enter 1st Number"
+            android:imeOptions="actionNext"
+            android:drawableLeft="@drawable/phone_call"
+            android:inputType="number"
+            android:maxLength="10" />
+
+        <EditText
+            android:id="@+id/remergency_gmail_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/email"
+            android:background="#fff"
+            android:ems="15"
+            android:gravity="center"
+            android:hint="Enter Emergency Email 1"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            />
+
+        <EditText
+            android:id="@+id/rnumber_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:ems="15"
+            android:gravity="center"
+            android:hint="Enter 2nd Number"
+            android:drawableLeft="@drawable/phone_call"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="10" />
+
+        <EditText
+            android:id="@+id/remergency_gmail_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:ems="15"
+            android:gravity="center"
+            android:hint="Enter Emergency Email 2"
+            android:drawableLeft="@drawable/email"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/rnumber_3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:ems="15"
+            android:gravity="center"
+            android:hint="Enter 3rd Number"
+            android:drawableLeft="@drawable/phone_call"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:maxLength="10" />
+
+        <EditText
+            android:id="@+id/remergency_gmail_3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/email"
+            android:layout_marginTop="10dp"
+            android:background="#fff"
+            android:ems="15"
+            android:gravity="center"
+            android:hint="Enter Emergency Email 3"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            />
+
+        <TextView
+            android:id="@+id/rtv5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Set a password :"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="45dp"
+            android:textColor="#f00"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/rreg_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ems="15"
+            android:gravity="center"
+            android:background="#fff"
+            android:drawableLeft="@drawable/lock"
+            android:hint="Password"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/rreg_re_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:ems="15"
+            android:gravity="center"
+            android:background="#fff"
+            android:drawableLeft="@drawable/password"
+            android:hint="Confirm Password"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword" />
+        <CheckBox
+            android:id="@+id/rcb1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000"
+            android:text="Show Password" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/rreg_update"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:ems="15"
+                android:gravity="center_vertical"
+                android:text="Update Details"
+                android:onClick="updateUser"
+                android:textAlignment="center"
+                android:textColor="#a72ce9"
+                android:background="#fff"
+                tools:ignore="OnClick" />
+            <Button
+                android:id="@+id/rreg_delete"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:ems="15"
+                android:onClick="deleteUser"
+                android:text="Delete Account"
+                android:textAlignment="center"
+                android:textColor="#a72ce9"
+                android:background="#fff"
+                tools:ignore="OnClick" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

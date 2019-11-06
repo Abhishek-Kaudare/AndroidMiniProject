@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:clickable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="cursive"
+            android:text="About the App"
+            android:textColor="#ed0a0a"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Security for women has become a major issue as the number of crimes over women and girls increasing day by day. This paper describes about women safety and their security by using electronic device to both detect. The problem and alert Authorities .This paper suggests a new perspective to use technology to protect women. We use an android based smart phone with an integrated feature that alert and provide location based Information. This Document describe GPS and GSM based 'Women Security System' that provides the combination of GPS devices as well as provide alerts and message with an emergency button Trigger. Whenever somebody is in Trouble They Only have to press Volume Key Button After that a message alert is sent to Register Contact list and a Voice Call to the Number registered first and give a message 'I AM IN TROUBLE PLEASE HELP ME' Now a day safety of women is becoming very poor with the help of this Application . The project was development in Android Which Graphical User Interface it provides the level of reliability, availability and compatibility. All these make Android an appropriate language for this project because Android language is based on JAVA language."
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="cursive"
+            android:text="About the Developers"
+            android:textColor="#ed0a0a"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:padding="11dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:id="@+id/myPhoto"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/dev1"
+                tools:ignore="ContentDescription" />
+
+            <TextView android:id="@+id/aboutMe"
+                android:layout_width="310sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myPhoto"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="Niranjan Patil is an Engineer who completed his engineering from Ramrao Adik Institue of Technology under the Department of Information Technology."
+                android:textColor="#212121"
+                android:textSize="17sp" />
+            <TextView android:id="@+id/aboutApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutMe"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="E-mail : patilniranjan191@gmail.com"
+                android:textColor="#212121"
+                android:textSize="17sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:padding="11dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:id="@+id/myPhoto2"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/dev2"
+                tools:ignore="ContentDescription" />
+
+            <TextView android:id="@+id/aboutMe2"
+                android:layout_width="310sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myPhoto2"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="Shweta Desale is an Engineer who completed her engineering from Ramrao Adik Institue of Technology under the Department of Information Technology."
+                android:textColor="#212121"
+                android:textSize="17sp" />
+            <TextView android:id="@+id/aboutApp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutMe2"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="E-mail : shwetadesale52@gmail.com"
+                android:textColor="#212121"
+                android:textSize="17sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:padding="11dp"
+            xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:id="@+id/myPhoto3"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/dev3"
+                tools:ignore="ContentDescription" />
+
+            <TextView android:id="@+id/aboutMe3"
+                android:layout_width="310sp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/myPhoto3"
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:text="Revati Barge is an Engineer who completed her engineering from Ramrao Adik Institue of Technology under the Department of Information Technology."
+                android:textColor="#212121"
+                android:textSize="17sp" />
+            <TextView android:id="@+id/aboutApp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aboutMe3"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:text="E-mail : revatibarge2026@gmail.com"
+                android:textColor="#212121"
+                android:textSize="17sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>
