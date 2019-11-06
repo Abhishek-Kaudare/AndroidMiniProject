@@ -1060,7 +1060,7 @@ public final class SettingsFragment extends Fragment {
 
         SharedPreferences prefs = var21.getSharedPreferences(Staticated.INSTANCE.getIS_LOGGEDIN(), 0);
         String ide = String.valueOf(prefs.getInt("userId", 0));
-        EditText var22 = findViewById(id.rreg_name);
+        EditText var22 = this.getView().findViewById(id.rreg_name);
         SplashActivity.checkExpressionValueIsNotNull(var22, "rreg_name");
         String var23 = var22.getText().toString();
         EditText var10003 = this.getView().findViewById(id.rreg_age);

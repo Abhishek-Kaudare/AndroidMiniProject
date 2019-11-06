@@ -89,9 +89,9 @@
                     android:id="@+id/delete_view"
                     android:layout_below="@id/logout_button"
                     android:layout_toEndOf="@id/logout_button"
-                android:layout_height="0.2dp"
-                android:layout_marginRight="17dp"
-                android:background="#EEEEEE"
+                    android:layout_height="0.2dp"
+                    android:layout_marginRight="17dp"
+                    android:background="#EEEEEE"
                     android:layout_toRightOf="@id/logout_button" />
             </RelativeLayout>
 

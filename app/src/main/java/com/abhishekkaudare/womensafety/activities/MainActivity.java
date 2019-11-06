@@ -4,7 +4,7 @@ package com.abhishekkaudare.womensafety.activities;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences.Editor;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -24,6 +24,8 @@ import androidx.recyclerview.widget.RecyclerView.Adapter;
 import androidx.recyclerview.widget.RecyclerView.ItemAnimator;
 import androidx.recyclerview.widget.RecyclerView.LayoutManager;
 import com.abhishekkaudare.womensafety.R.id;
+import com.abhishekkaudare.womensafety.R;
+import com.abhishekkaudare.womensafety.R.mipmap.*;
 import com.abhishekkaudare.womensafety.activities.SplashActivity.Staticated;
 import com.abhishekkaudare.womensafety.adapters.NavigationDrawerAdapter;
 import com.abhishekkaudare.womensafety.fragments.MainScreenFragment;
@@ -83,14 +85,14 @@ public final class MainActivity extends AppCompatActivity {
 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        this.setContentView(-1300072);
-        Toolbar toolbar = (Toolbar)this.findViewById(-1000252);
+        this.setContentView(R.layout.activity_main);
+        Toolbar toolbar = this.findViewById(R.id.toolbar);
         this.setSupportActionBar(toolbar);
-        Statified.INSTANCE.setDrawerLayout((DrawerLayout)this.findViewById(-1000279));
+        Statified.INSTANCE.setDrawerLayout((DrawerLayout)this.findViewById(R.id.drawer_layout));
         this.navigationDrawerIconsList.add("Your Profile");
         this.navigationDrawerIconsList.add("Settings");
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, Statified.INSTANCE.getDrawerLayout(), toolbar, -1900093, -1900111);
-        ((Button)this._$_findCachedViewById(com.abhishekkaudare.womensafety.R.id.logout_button)).setOnClickListener((OnClickListener)(new OnClickListener() {
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, Statified.INSTANCE.getDrawerLayout(), toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        this.findViewById(R.id.logout_button).setOnClickListener(new OnClickListener() {
             public final void onClick(View it) {
                 SharedPreferences.Editor editor = MainActivity.this.getSharedPreferences(Staticated.INSTANCE.getIS_LOGGEDIN(), 0).edit();
                 if (editor != null) {
@@ -104,45 +106,45 @@ public final class MainActivity extends AppCompatActivity {
                 Intent broadcastIntent = new Intent();
                 broadcastIntent.setAction("com.package.ACTION_LOGOUT");
                 MainActivity.this.sendBroadcast(broadcastIntent);
-                Toast.makeText((Context)MainActivity.this, (CharSequence)"User Logged Out", 1).show();
-                (new Handler()).postDelayed((Runnable)(new Runnable() {
+                Toast.makeText(MainActivity.this, "User Logged Out", Toast.LENGTH_LONG).show();
+                (new Handler()).postDelayed(new Runnable() {
                     public final void run() {
-                        Intent startAct = new Intent((Context)MainActivity.this, LoginActivity.class);
+                        Intent startAct = new Intent(MainActivity.this, LoginActivity.class);
                         MainActivity.this.startActivity(startAct);
                         MainActivity.this.finish();
                     }
-                }), 1000L);
+                }, 1000L);
             }
-        }));
+        });
         DrawerLayout var10000 = Statified.INSTANCE.getDrawerLayout();
         if (var10000 != null) {
-            var10000.addDrawerListener((DrawerListener)toggle);
+            var10000.addDrawerListener(toggle);
         }
 
         toggle.syncState();
         MainScreenFragment mainScreenFragment = new MainScreenFragment();
-        this.getSupportFragmentManager().beginTransaction().add(-1000118, (Fragment)mainScreenFragment, "MainScreenFragment").commit();
-        NavigationDrawerAdapter _navigationAdapter = new NavigationDrawerAdapter(this.navigationDrawerIconsList, this.images_for_navdrawer, (Context)this);
+        this.getSupportFragmentManager().beginTransaction().add(R.id.details_fragment, mainScreenFragment, "MainScreenFragment").commit();
+        NavigationDrawerAdapter _navigationAdapter = new NavigationDrawerAdapter(this.navigationDrawerIconsList, this.images_for_navdrawer, this);
         _navigationAdapter.notifyDataSetChanged();
-        RecyclerView navigation_recycler_view = (RecyclerView)this.findViewById(-1000030);
+        RecyclerView navigation_recycler_view = this.findViewById(R.id.navigation_recycler_view);
         SplashActivity.checkExpressionValueIsNotNull(navigation_recycler_view, "navigation_recycler_view");
-        navigation_recycler_view.setLayoutManager((LayoutManager)(new LinearLayoutManager((Context)this)));
-        navigation_recycler_view.setItemAnimator((ItemAnimator)(new DefaultItemAnimator()));
-        navigation_recycler_view.setAdapter((Adapter)_navigationAdapter);
+        navigation_recycler_view.setLayoutManager(new LinearLayoutManager(this));
+        navigation_recycler_view.setItemAnimator(new DefaultItemAnimator());
+        navigation_recycler_view.setAdapter(_navigationAdapter);
         navigation_recycler_view.setHasFixedSize(true);
     }
 
     public final void videorecord(@NotNull View v) {
         SplashActivity.checkParameterIsNotNull(v, "v");
         VideoRecordingFragment videoRecordingFragment = new VideoRecordingFragment();
-        this.getSupportFragmentManager().beginTransaction().replace(-1000118, (Fragment)videoRecordingFragment).addToBackStack("mainScreenFragement").commit();
+        this.getSupportFragmentManager().beginTransaction().replace(R.id.details_fragment, videoRecordingFragment).addToBackStack("mainScreenFragement").commit();
     }
 
     public MainActivity() {
         boolean var1 = false;
         ArrayList var3 = new ArrayList();
         this.navigationDrawerIconsList = var3;
-        this.images_for_navdrawer = new int[]{-1500006, -1500000, -1500005};
+        this.images_for_navdrawer = new int[]{R.mipmap.profile, R.mipmap.settings, R.mipmap.safety};
     }
 
     public View _$_findCachedViewById(int var1) {
